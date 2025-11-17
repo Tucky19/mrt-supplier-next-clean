@@ -1,0 +1,481 @@
+<<<<<<< HEAD
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* พื้นหลังหลัก */
+body {
+  @apply bg-[#050814] text-slate-100;
+}
+
+/* Layout หลัก */
+.mrt-page {
+  @apply min-h-screen flex flex-col bg-gradient-to-b from-[#050814] via-[#050814] to-black;
+}
+
+.mrt-container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* NAVBAR */
+.mrt-nav {
+  @apply sticky top-0 z-40 border-b border-white/5 bg-black/70 backdrop-blur;
+}
+
+.mrt-nav-inner {
+  @apply flex h-16 items-center justify-between;
+}
+
+.mrt-logo {
+  @apply flex items-center gap-3 no-underline;
+}
+
+.mrt-logo-mark {
+  @apply h-8 w-8 rounded-full bg-red-500 flex items-center justify-center text-xs font-semibold tracking-tight;
+}
+
+.mrt-logo-text {
+  @apply flex flex-col leading-tight;
+}
+
+.mrt-logo-main {
+  @apply text-sm font-semibold tracking-wide;
+}
+
+.mrt-logo-sub {
+  @apply text-[11px] text-slate-400;
+}
+
+.mrt-nav-links {
+  @apply hidden md:flex items-center gap-6 text-sm text-slate-300;
+}
+
+.mrt-nav-links a {
+  @apply hover:text-white transition-colors;
+}
+
+/* ปุ่ม */
+.mrt-btn {
+  @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-all;
+}
+
+.mrt-btn-primary {
+  @apply bg-red-500 text-white shadow-lg shadow-red-500/40 hover:bg-red-400;
+}
+
+.mrt-btn-outline {
+  @apply border border-white/30 text-white hover:bg-white/10;
+}
+
+/* HERO */
+.mrt-hero {
+  @apply relative overflow-hidden pb-20 pt-10 lg:pt-16;
+}
+
+.mrt-hero-image-wrapper {
+  @apply absolute inset-0 -z-20;
+}
+
+.mrt-hero-image-overlay {
+  @apply object-cover object-center;
+}
+
+.mrt-hero-gradient {
+  @apply absolute inset-0 -z-10 bg-gradient-to-r from-[#050814] via-[#050814]/70 to-transparent;
+}
+
+.mrt-hero-content {
+  @apply relative;
+}
+
+.mrt-hero-inner {
+  @apply grid gap-10 lg:grid-cols-2 items-center;
+}
+
+.mrt-hero-kicker {
+  @apply text-xs font-semibold tracking-[0.25em] uppercase text-red-400 mb-2;
+}
+
+.mrt-hero-heading {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4;
+}
+
+.mrt-hero-subtext {
+  @apply text-sm sm:text-base text-slate-300 max-w-xl mb-6;
+}
+
+.mrt-hero-actions {
+  @apply flex flex-wrap items-center gap-3 mb-5;
+}
+
+.mrt-hero-brand-chips {
+  @apply flex flex-wrap gap-2 text-xs;
+}
+
+.mrt-chip {
+  @apply rounded-full bg-white/10 px-3 py-1 text-slate-200 border border-white/10;
+}
+
+/* Brand strip */
+.mrt-section {
+  @apply py-14;
+}
+
+.mrt-brand-strip {
+  @apply border-y border-white/5 bg-gradient-to-r from-[#151624] via-[#171829] to-[#191b2d];
+}
+
+.mrt-section-kicker {
+  @apply text-xs font-semibold tracking-[0.25em] uppercase text-slate-400 mb-2;
+}
+
+.mrt-brand-row {
+  @apply flex flex-wrap gap-3;
+}
+
+.mrt-brand-pill {
+  @apply rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs font-medium text-slate-100;
+}
+
+/* หัวข้อ Section */
+.mrt-section-title {
+  @apply text-2xl sm:text-3xl font-semibold mb-3;
+}
+
+.mrt-section-subtitle {
+  @apply text-sm sm:text-base text-slate-300 max-w-2xl mb-8;
+}
+
+/* Product categories */
+.mrt-product-categories {
+  @apply bg-[#080c1a];
+}
+
+.mrt-product-grid {
+  @apply grid gap-6 md:grid-cols-3;
+}
+
+.mrt-product-card {
+  @apply rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/0 p-5 shadow-mrt-card flex flex-col justify-between;
+}
+
+.mrt-product-icon {
+  @apply text-2xl mb-3;
+}
+
+.mrt-product-card h3 {
+  @apply text-lg font-semibold mb-2;
+}
+
+.mrt-product-card p {
+  @apply text-sm text-slate-300 mb-4;
+}
+
+.mrt-product-btn {
+  @apply inline-flex items-center text-xs font-semibold text-red-300 hover:text-red-200;
+}
+
+/* Industries */
+.mrt-industries {
+  @apply bg-[#050814];
+}
+
+.mrt-industries-grid {
+  @apply grid gap-6 md:grid-cols-3;
+}
+
+.mrt-industry-card {
+  @apply rounded-2xl border border-white/10 bg-gradient-to-b from-[#141726] to-[#0b0f1f] p-5 flex flex-col justify-between;
+}
+
+.mrt-industry-pill {
+  @apply inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold tracking-wide uppercase bg-red-500/90 text-white mb-3;
+}
+
+.mrt-industry-tags {
+  @apply mt-3 flex flex-wrap gap-2 text-[11px] text-slate-300;
+}
+
+.mrt-industry-tags span {
+  @apply rounded-full bg-white/5 px-2.5 py-1 border border-white/10;
+}
+
+/* Why Us */
+.mrt-section-alt {
+  @apply bg-[#080c1a];
+}
+
+.mrt-card {
+  @apply rounded-2xl border border-white/10 bg-gradient-to-b from-[#111325] to-[#090c1b] p-5;
+}
+
+.mrt-card-title {
+  @apply text-base font-semibold mb-2;
+}
+
+.mrt-card-text {
+  @apply text-sm text-slate-300;
+}
+
+/* Contact section */
+.mrt-contact {
+  @apply bg-black/40 border-t border-white/10;
+}
+
+.mrt-contact-grid {
+  @apply grid gap-6 md:grid-cols-3 text-sm;
+}
+
+.mrt-contact-label {
+  @apply text-xs uppercase tracking-wide text-slate-400 mb-1;
+}
+
+/* Footer */
+.mrt-footer {
+  @apply border-t border-white/10 bg-black/90;
+}
+
+.mrt-footer-inner {
+  @apply mrt-container py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-slate-400;
+}
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* พื้นหลังหลัก */
+body {
+  @apply bg-[#050814] text-slate-100;
+}
+
+/* Layout หลัก */
+.mrt-page {
+  @apply min-h-screen flex flex-col bg-gradient-to-b from-[#050814] via-[#050814] to-black;
+}
+
+.mrt-container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* NAVBAR */
+.mrt-nav {
+  @apply sticky top-0 z-40 border-b border-white/5 bg-black/70 backdrop-blur;
+}
+
+.mrt-nav-inner {
+  @apply flex h-16 items-center justify-between;
+}
+
+.mrt-logo {
+  @apply flex items-center gap-3 no-underline;
+}
+
+.mrt-logo-mark {
+  @apply h-8 w-8 rounded-full bg-red-500 flex items-center justify-center text-xs font-semibold tracking-tight;
+}
+
+.mrt-logo-text {
+  @apply flex flex-col leading-tight;
+}
+
+.mrt-logo-main {
+  @apply text-sm font-semibold tracking-wide;
+}
+
+.mrt-logo-sub {
+  @apply text-[11px] text-slate-400;
+}
+
+.mrt-nav-links {
+  @apply hidden md:flex items-center gap-6 text-sm text-slate-300;
+}
+
+.mrt-nav-links a {
+  @apply hover:text-white transition-colors;
+}
+
+/* ปุ่ม */
+.mrt-btn {
+  @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-all;
+}
+
+.mrt-btn-primary {
+  @apply bg-red-500 text-white shadow-lg shadow-red-500/40 hover:bg-red-400;
+}
+
+.mrt-btn-outline {
+  @apply border border-white/30 text-white hover:bg-white/10;
+}
+
+/* HERO */
+.mrt-hero {
+  @apply relative overflow-hidden pb-20 pt-10 lg:pt-16;
+}
+
+.mrt-hero-image-wrapper {
+  @apply absolute inset-0 -z-20;
+}
+
+.mrt-hero-image-overlay {
+  @apply object-cover object-center;
+}
+
+.mrt-hero-gradient {
+  @apply absolute inset-0 -z-10 bg-gradient-to-r from-[#050814] via-[#050814]/70 to-transparent;
+}
+
+.mrt-hero-content {
+  @apply relative;
+}
+
+.mrt-hero-inner {
+  @apply grid gap-10 lg:grid-cols-2 items-center;
+}
+
+.mrt-hero-kicker {
+  @apply text-xs font-semibold tracking-[0.25em] uppercase text-red-400 mb-2;
+}
+
+.mrt-hero-heading {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4;
+}
+
+.mrt-hero-subtext {
+  @apply text-sm sm:text-base text-slate-300 max-w-xl mb-6;
+}
+
+.mrt-hero-actions {
+  @apply flex flex-wrap items-center gap-3 mb-5;
+}
+
+.mrt-hero-brand-chips {
+  @apply flex flex-wrap gap-2 text-xs;
+}
+
+.mrt-chip {
+  @apply rounded-full bg-white/10 px-3 py-1 text-slate-200 border border-white/10;
+}
+
+/* Brand strip */
+.mrt-section {
+  @apply py-14;
+}
+
+.mrt-brand-strip {
+  @apply border-y border-white/5 bg-gradient-to-r from-[#151624] via-[#171829] to-[#191b2d];
+}
+
+.mrt-section-kicker {
+  @apply text-xs font-semibold tracking-[0.25em] uppercase text-slate-400 mb-2;
+}
+
+.mrt-brand-row {
+  @apply flex flex-wrap gap-3;
+}
+
+.mrt-brand-pill {
+  @apply rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs font-medium text-slate-100;
+}
+
+/* หัวข้อ Section */
+.mrt-section-title {
+  @apply text-2xl sm:text-3xl font-semibold mb-3;
+}
+
+.mrt-section-subtitle {
+  @apply text-sm sm:text-base text-slate-300 max-w-2xl mb-8;
+}
+
+/* Product categories */
+.mrt-product-categories {
+  @apply bg-[#080c1a];
+}
+
+.mrt-product-grid {
+  @apply grid gap-6 md:grid-cols-3;
+}
+
+.mrt-product-card {
+  @apply rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/0 p-5 shadow-mrt-card flex flex-col justify-between;
+}
+
+.mrt-product-icon {
+  @apply text-2xl mb-3;
+}
+
+.mrt-product-card h3 {
+  @apply text-lg font-semibold mb-2;
+}
+
+.mrt-product-card p {
+  @apply text-sm text-slate-300 mb-4;
+}
+
+.mrt-product-btn {
+  @apply inline-flex items-center text-xs font-semibold text-red-300 hover:text-red-200;
+}
+
+/* Industries */
+.mrt-industries {
+  @apply bg-[#050814];
+}
+
+.mrt-industries-grid {
+  @apply grid gap-6 md:grid-cols-3;
+}
+
+.mrt-industry-card {
+  @apply rounded-2xl border border-white/10 bg-gradient-to-b from-[#141726] to-[#0b0f1f] p-5 flex flex-col justify-between;
+}
+
+.mrt-industry-pill {
+  @apply inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold tracking-wide uppercase bg-red-500/90 text-white mb-3;
+}
+
+.mrt-industry-tags {
+  @apply mt-3 flex flex-wrap gap-2 text-[11px] text-slate-300;
+}
+
+.mrt-industry-tags span {
+  @apply rounded-full bg-white/5 px-2.5 py-1 border border-white/10;
+}
+
+/* Why Us */
+.mrt-section-alt {
+  @apply bg-[#080c1a];
+}
+
+.mrt-card {
+  @apply rounded-2xl border border-white/10 bg-gradient-to-b from-[#111325] to-[#090c1b] p-5;
+}
+
+.mrt-card-title {
+  @apply text-base font-semibold mb-2;
+}
+
+.mrt-card-text {
+  @apply text-sm text-slate-300;
+}
+
+/* Contact section */
+.mrt-contact {
+  @apply bg-black/40 border-t border-white/10;
+}
+
+.mrt-contact-grid {
+  @apply grid gap-6 md:grid-cols-3 text-sm;
+}
+
+.mrt-contact-label {
+  @apply text-xs uppercase tracking-wide text-slate-400 mb-1;
+}
+
+/* Footer */
+.mrt-footer {
+  @apply border-t border-white/10 bg-black/90;
+}
+
+.mrt-footer-inner {
+  @apply mrt-container py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-slate-400;
+}
+>>>>>>> 3b9eb9d789cf4e96d69fb58ac7472e2d3560a6d8
